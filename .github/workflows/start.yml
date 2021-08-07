@@ -11,4 +11,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: The bot is ready and availabe for 6 hours!
-        run: while true; do; sleep 100; done
+        run: while true; do "running"; sleep 100; done
