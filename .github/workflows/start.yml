@@ -25,5 +25,5 @@ jobs:
         run: docker build . -t mirror-bot
       - name: Running the bot
         run: docker run mirror-bot
-      - name: The bot is ready and availabe for 6 hours! Join t.me/drivetalk for any question
+      - name: The bot is ready and available for 6 hours! Join t.me/drivetalk for any question
         run: while true; do sleep 100; done
