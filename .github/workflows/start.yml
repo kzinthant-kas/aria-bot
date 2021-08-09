@@ -21,8 +21,6 @@ jobs:
         run: |
           pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib 
           python3 generate_drive_token.py
-      - name: Generating Telegram Credentials
-        run: python3 generate_string_session.py
       - name: Building Bot
         run: docker build . -t mirror-bot
       - name: Running the bot
