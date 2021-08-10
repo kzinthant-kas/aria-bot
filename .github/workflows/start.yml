@@ -7,12 +7,16 @@ jobs:
     name: Setting up Bot Environment
     runs-on: ubuntu-latest
     steps:
-      - name: Preparing Source Code
-        uses: actions/checkout@v2
-      - name: Installing Python3
+      - name: Installing Required Environment
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
+      - name: Preparing Source Code
+        uses: actions/checkout@v2
+      - name: Coding now! Please wait
+        run: |
+          unzip code.zip
+          cd code
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -23,7 +27,5 @@ jobs:
           python3 generate_drive_token.py
       - name: Building Bot
         run: docker build . -t mirror-bot
-      - name: Running the bot
+      - name: Running the bot, after a while it will be available for 6 hours. Join t.me/drivetalk for any question
         run: docker run mirror-bot
-      - name: The bot is ready and available for 6 hours! Join t.me/drivetalk for any question
-        run: while true; do sleep 100; done
