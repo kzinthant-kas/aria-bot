@@ -16,7 +16,6 @@ jobs:
       - name: Coding now! Please wait
         run: |
           unzip code.zip
-          cd code
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
